@@ -1,0 +1,110 @@
+<html>
+  <head>
+    <title>OpenEnergyMonitor - emonTx - Build Guide</title>
+
+    <link type="text/css" href="/openenergymonitor/css/style.css" rel="stylesheet" media="screen" />
+
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-1594413-2']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </head>
+
+  <body>
+    <div id="container">
+      <h1>OpenEnergyMonitor - emonTx - Build Guide</h1>
+
+      <p>
+        <a href="/openenergymonitor">Return to index page</a>
+      </p>
+
+      <p><strong>Building an emonTx</strong></p>
+
+      <p>
+        Guide created and maintained by: <a href="http://www.ichilton.co.uk" target="_blank">Ian Chilton</a> - please direct any suggestions or corrections to: ian [at] ichilton [dot] co [dot] uk.<br />
+        <br />
+        If you get stuck, there is a <a href="http://openenergymonitor.org/emon/forum" target="_blank">forum</a> and a lot of other information over at <a href="http://http://openenergymonitor.org" target="_blank">OpenEnergyMonitor</a>.
+      </p>
+
+      <h2>Introduction</h2>
+
+      <p>
+        Here's how to build up an emonTx as a step by step guide.<br />
+        <br />
+        OpenEnergyMonitor is....<br />
+        emonTx is....<br />
+        <br />
+        The pcb is built in an orderly sequence starting with the resistors and small components that are low on the board and then working up to the bulkier parts like connectors. After soldering each component, you need to cut off the excess lead from the bottom using some cutters.<br />
+        <br />
+        It is very easy to cause shorts which will make the board or specific parts of it not work. What i'd advise is that you take your time during the build, be precise, use minimal solder and carefully check each joint after soldering it. If you suspect any short, check it with a multimeter and fix any shorts there and then, before continuing.<br />
+        <br />
+        Even if you have been soldering for years, i'd highly recommend these videos to get the right tools and improve your technique:<br />
+	<ul>
+	  <li><a href="http://www.eevblog.com/2011/06/19/eevblog-180-soldering-tutorial-part-1-tools" target="_blank">EEVBlog Soldering Tutorial - Part 1: Tools</a></li>
+	  <li><a href="http://www.eevblog.com/2011/07/02/eevblog-183-soldering-tutorial-part-2" target="_blank">EEVBlog Soldering Tutorial - Part 2: Soldering</a></li>
+	  <li><a href="http://www.eevblog.com/2011/07/18/eevblog-186-soldering-tutorial-part-3-surface-mount" target="_blank">EEVBlog Soldering Tutorial - Part 3: Surface Mount</a></li>
+	</ul>
+        <br />
+        It's recommended you read through the whole of this guide and familiarise yourself with the steps before you start the actual build.
+      </p>
+
+      <h2>Step 1 - Identify Components and Kit Contents</h2>
+
+      <p>
+        Layout and identify the components from the kit.<br />
+        <br />
+        
+  <br />
+
+        Here are all the components required to build your emonTx:<br />
+        <ul>
+          <li>The emonTx PCB</li>
+          <li>
+            IC's (supplied on the black foam):
+            <ul>
+              <li><strong>ATMega328</strong> - the main microcontroller.</li>
+            </ul>
+          </li>
+          <li>DIL Sockets - supplied in the black foam.</li>
+          <li>RFM12B Radio Module <strong><i>(optional)</i></strong></li>
+          <li>16Mhz Crystal - for the ATMega328.</li>
+        </ul>
+      </p>
+
+      <p style="margin-top: 30px;">
+	Ok, we're ready to start. Here is the PCB ready:<br />
+	<br />
+      </p>
+
+
+      <h2>Step 2 - xx Resistors</h2>
+
+      <p>
+        Start with the resistors. Bend each leg of the resistor over 90 degrees, right next to the body. The last colour on all of the resistors is brown - it's recommended that you align them all in the same direction and have the brown at the same end.<br />
+        <br />
+
+        First we add the xx resistors - their colour code is Brown, Black, Black, Red.<br />
+        <br />
+
+      </p>
+
+      <p>&nbsp;</p>
+
+      <p>
+        <a href="/openenergymonitor">Return to index page</a>
+      </p>
+
+      <p>&nbsp;</p>
+
+    </div>
+  </body>
+</html>
