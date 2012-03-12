@@ -40,8 +40,11 @@
       <p>
         Here's how to build up an emonTx as a step by step guide.<br />
         <br />
-        OpenEnergyMonitor is....<br />
-        emonTx is....<br />
+        OpenEnergyMonitor is project to develop and build open-source energy monitoring, control and analysis tools. The main focus at the moment is developing an end-to-end open-source energy monitoring system that is Arduino IDE compatible. More information can be found at: <a href="http://openenergymonitor.org">http://openenergymonitor.org</a><br />
+        <br />
+        emonTx is a low power wireless energy monitoring node. It's designed to sense data from multiple CT current sensors, optically from a pulse-output utility meter and from multiple one-wire temperature sensors. It can be powered by 2 x AA batteries or 5V USB.<br />
+        <br />
+        <img src="http://openenergymonitor.org/emon/sites/default/files/EmonTx%20V2.0_0.png" width="640" height="426" /><br />
         <br />
         The pcb is built in an orderly sequence starting with the resistors and small components that are low on the board and then working up to the bulkier parts like connectors. After soldering each component, you need to cut off the excess lead from the bottom using some cutters.<br />
         <br />
@@ -62,39 +65,288 @@
       <p>
         Layout and identify the components from the kit.<br />
         <br />
-        
-  <br />
+        <table style="width:auto;"><tr><td><a href="https://picasaweb.google.com/lh/photo/iwnHH6DGRR6maV3fuB5Hy9MTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img src="https://lh5.googleusercontent.com/-q5G260Gvm4w/T15U7MgaDwI/AAAAAAAAAxY/Od6ju_zGggg/s640/DSC_0003.JPG" height="426" width="640" /></a></td></tr><tr><td style="font-family:arial,sans-serif; font-size:11px; text-align:right">From <a href="https://picasaweb.google.com/102609311033098924606/OpenEnergyMonitorEmonTxBuild?authuser=0&feat=embedwebsite">OpenEnergyMonitor - emonTx Build</a></td></tr></table>
+	<br />
 
         Here are all the components required to build your emonTx:<br />
         <ul>
           <li>The emonTx PCB</li>
-          <li>
-            IC's (supplied on the black foam):
-            <ul>
-              <li><strong>ATMega328</strong> - the main microcontroller.</li>
-            </ul>
-          </li>
-          <li>DIL Sockets - supplied in the black foam.</li>
-          <li>RFM12B Radio Module <strong><i>(optional)</i></strong></li>
-          <li>16Mhz Crystal - for the ATMega328.</li>
+          <li>3x 18 ohm 1% Resistors (brown, grey, black, gold, brown on blue)</li>
+          <li>2x 10k 1% Resistors (brown, black, black, red, brown on blue)</li>
+          <li>1x 100k 1% Resistor (brown, black, black, orange, brown on blue)</li>
+          <li>8x 470k Resistors (yellow, violet, yellow, gold)</li>
+          <li>1x 4k7 Resistor (yellow, violet, red, gold)</li>
+          <li>1x 100 ohm Resistor (brown, black, brown, gold)</li>
+          <li>4x 100nF (0.1uF) Ceramic Capacitors</li>
+          <li>5x 10uF Electrolytic Capacitors</li>
+          <li>2x 22pF Ceramic Capacitors</li>
+          <li>1x Atmel ATMega328 - the main microcontroller</li>
+          <li>1x 28-Pin DIL Socket</li>
+          <li>1x RFM12B Radio Module - available in 433Mhz or 868Mhz versions</li>
+          <li>1x 165mm (433Mhz) or 82mm (868Mhz) Wire for RFM12B Antenna</li>
+          <li>1x 16Mhz Crystal - for the ATMega328.</li>
+          <li>1x USB Mini B Socket</li>
+          <li>1x Microchip MCP1702 3.3v Voltage Regulator</li>
+          <li>1x 3mm Green LED</li>
+          <li>1x 2.1mm Power Socket</li>
+          <li>5x 3.5mm Jack Sockets</li>
+          <li>100A CT Clamp</li>
         </ul>
+
+        <br />
+
+        <table style="width:auto;"><tr><td><a href="https://picasaweb.google.com/lh/photo/wO8grz9JCukR1710w9rxgtMTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img src="https://lh6.googleusercontent.com/-GumIcdcX-XU/T15VIxJAWCI/AAAAAAAAA0M/fELblarGrTs/s640/DSC_0042.JPG" height="426" width="640" /></a></td></tr><tr><td style="font-family:arial,sans-serif; font-size:11px; text-align:right">From <a href="https://picasaweb.google.com/102609311033098924606/OpenEnergyMonitorEmonTxBuild?authuser=0&feat=embedwebsite">OpenEnergyMonitor - emonTx Build</a></td></tr></table>
+
+        <p><i>Note that the photo shows two different types of the 22pF capacitors - brown ceramic disc and small blue ones - only one of these pairs are required/included and are equivelent.</i></p>
       </p>
 
       <p style="margin-top: 30px;">
 	Ok, we're ready to start. Here is the PCB ready:<br />
 	<br />
+        <table style="width:auto;"><tr><td><a href="https://picasaweb.google.com/lh/photo/7MORertUeqfYpXAp7y3rONMTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img src="https://lh6.googleusercontent.com/-nl6i1eFLrfk/T15VA8vs3vI/AAAAAAAAAyk/artDIY1ddZM/s640/DSC_0030.JPG" height="426" width="640" /></a></td></tr><tr><td style="font-family:arial,sans-serif; font-size:11px; text-align:right">From <a href="https://picasaweb.google.com/102609311033098924606/OpenEnergyMonitorEmonTxBuild?authuser=0&feat=embedwebsite">OpenEnergyMonitor - emonTx Build</a></td></tr></table><br />
+
+        <br />
+
+        <table style="width:auto;"><tr><td><a href="https://picasaweb.google.com/lh/photo/3NQj73mpS8QqKzCYLy_xf9MTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img src="https://lh6.googleusercontent.com/-osqW8BOtLaY/T15VAX2S3iI/AAAAAAAAA8E/27M24JqcGO0/s640/DSC_0029.JPG" height="426" width="640" /></a></td></tr><tr><td style="font-family:arial,sans-serif; font-size:11px; text-align:right">From <a href="https://picasaweb.google.com/102609311033098924606/OpenEnergyMonitorEmonTxBuild?authuser=0&feat=embedwebsite">OpenEnergyMonitor - emonTx Build</a></td></tr></table><br />
       </p>
 
+      <p style="margin-top: 30px;">
+	This is where everything should go:
+	<br />
+        <table style="width:auto;"><tr><td><a href="https://picasaweb.google.com/lh/photo/u3spncXhKOTI9vZVbayhuNMTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img src="https://lh6.googleusercontent.com/-9DmuVRodcG8/T15el6ngApI/AAAAAAAAA_g/6BOnT9eEH_M/s640/emonTxV2.2_PCBvalues.png" height="576" width="640" /></a></td></tr><tr><td style="font-family:arial,sans-serif; font-size:11px; text-align:right">From <a href="https://picasaweb.google.com/102609311033098924606/OpenEnergyMonitorEmonTxBuild?authuser=0&feat=embedwebsite">OpenEnergyMonitor - emonTx Build</a></td></tr></table><br />
+        <br />
+        <img src="http://openenergymonitor.org/emon/sites/default/files/emonTx_V2.0%20overview.png" width="640" height="426" />
+      </p>
 
-      <h2>Step 2 - xx Resistors</h2>
+      <h2>Step 2 - 18 ohm Resistors</h2>
 
       <p>
-        Start with the resistors. Bend each leg of the resistor over 90 degrees, right next to the body. The last colour on all of the resistors is brown - it's recommended that you align them all in the same direction and have the brown at the same end.<br />
+        Start with the resistors. Bend each leg of the resistor over 90 degrees, right next to the body. It's recommended that you align them all in the same direction.<br />
+        <br />
+
+        First we add the 3x 18 ohm resistors - they are blue and their colour code is: Brown, Grey, Black, Gold, Brown.<br />
+        <br />
+        <table style="width:auto;"><tr><td><a href="https://picasaweb.google.com/lh/photo/SSm_UOwIbPs7sN7zvUapSNMTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img src="https://lh4.googleusercontent.com/-gRuQEVx-Kg8/T15VLzru_pI/AAAAAAAAA0k/xN13Rgrq4xg/s640/DSC_0049.JPG" height="426" width="640" /></a></td></tr><tr><td style="font-family:arial,sans-serif; font-size:11px; text-align:right">From <a href="https://picasaweb.google.com/102609311033098924606/OpenEnergyMonitorEmonTxBuild?authuser=0&feat=embedwebsite">OpenEnergyMonitor - emonTx Build</a></td></tr></table>
+      </p>
+
+      <p>&nbsp;</p>
+
+      <h2>Step 3 - 10k Resistors</h2>
+
+      <p>
+        Add the 2x 10k resistors - their colour code is Brown, Black, Black, Red.<br />
+        <br />
+        <table style="width:auto;"><tr><td><a href="https://picasaweb.google.com/lh/photo/jqxzBaiyFgGJQICmnMpz5dMTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img src="https://lh3.googleusercontent.com/-kkkJdBxpf2M/T15VM-zJnwI/AAAAAAAAA00/RhQi8n1HHWY/s640/DSC_0051.JPG" height="426" width="640" /></a></td></tr><tr><td style="font-family:arial,sans-serif; font-size:11px; text-align:right">From <a href="https://picasaweb.google.com/102609311033098924606/OpenEnergyMonitorEmonTxBuild?authuser=0&feat=embedwebsite">OpenEnergyMonitor - emonTx Build</a></td></tr></table>
+      </p>
+
+      <p>&nbsp;</p>
+
+      <h2>Step 4 - 100k Resistor</h2>
+
+      <p>
+        Add the 100k resistor - it's colour code is Brown, Black, Black, Red.<br />
+        <br />
+        <table style="width:auto;"><tr><td><a href="https://picasaweb.google.com/lh/photo/ox9r0RArELz_SrMcN3UJ9dMTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img src="https://lh4.googleusercontent.com/-RZbvptWdX8I/T15VQA5JJKI/AAAAAAAAA1c/ViJDb8Xxvd0/s640/DSC_0055.JPG" height="426" width="640" /></a></td></tr><tr><td style="font-family:arial,sans-serif; font-size:11px; text-align:right">From <a href="https://picasaweb.google.com/102609311033098924606/OpenEnergyMonitorEmonTxBuild?authuser=0&feat=embedwebsite">OpenEnergyMonitor - emonTx Build</a></td></tr></table>
+      </p>
+
+      <h2>Step 5 - 470k Resistors</h2>
+
+      <p>
+        Add the 470k resistors - their colour code is Brown, Black, Black, Red.<br />
+        <br />
+        <table style="width:auto;"><tr><td><a href="https://picasaweb.google.com/lh/photo/X8zNZRQQOW3fEVairxkh7tMTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img src="https://lh5.googleusercontent.com/-47cV5Lh4hJ4/T15VUWvZ4nI/AAAAAAAAA2E/76IErrpLy9c/s640/DSC_0061.JPG" height="426" width="640" /></a></td></tr><tr><td style="font-family:arial,sans-serif; font-size:11px; text-align:right">From <a href="https://picasaweb.google.com/102609311033098924606/OpenEnergyMonitorEmonTxBuild?authuser=0&feat=embedwebsite">OpenEnergyMonitor - emonTx Build</a></td></tr></table>
+      </p>
+
+      <p>&nbsp;</p>
+
+      <h2>Step 6 - 4k7 Resistor</h2>
+
+      <p>
+        First we add the xx resistors - their colour code is Brown, Black, Black, Red.<br />
+        <br />
+        <table style="width:auto;"><tr><td><a href="https://picasaweb.google.com/lh/photo/liKp0ULRlsk0ep3ZcX09fdMTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img src="https://lh6.googleusercontent.com/-9-EBvyv3MM4/T15VWnmNFUI/AAAAAAAAA2c/GFyPzWhCvQM/s640/DSC_0064.JPG" height="426" width="640" /></a></td></tr><tr><td style="font-family:arial,sans-serif; font-size:11px; text-align:right">From <a href="https://picasaweb.google.com/102609311033098924606/OpenEnergyMonitorEmonTxBuild?authuser=0&feat=embedwebsite">OpenEnergyMonitor - emonTx Build</a></td></tr></table>
+      </p>
+
+      <p>&nbsp;</p>
+
+      <h2>Step 7 - 100 ohm Resistor</h2>
+
+      <p>
+        First we add the xx resistors - their colour code is Brown, Black, Black, Red.<br />
+        <br />
+        <table style="width:auto;"><tr><td><a href="https://picasaweb.google.com/lh/photo/N7iwa5037mU992U0Uq9cMNMTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img src="https://lh3.googleusercontent.com/-O_CxUeWUZyw/T15VXFBkv8I/AAAAAAAAA2o/EsWBFZQ3qd0/s640/DSC_0065.JPG" height="426" width="640" /></a></td></tr><tr><td style="font-family:arial,sans-serif; font-size:11px; text-align:right">From <a href="https://picasaweb.google.com/102609311033098924606/OpenEnergyMonitorEmonTxBuild?authuser=0&feat=embedwebsite">OpenEnergyMonitor - emonTx Build</a></td></tr></table>
+      </p>
+
+      <p>&nbsp;</p>
+
+      <h2>Step 8 - 22pF Ceramic Capacitors</h2>
+
+      <p>
+        S<br />
         <br />
 
         First we add the xx resistors - their colour code is Brown, Black, Black, Red.<br />
         <br />
+        <table style="width:auto;"><tr><td><a href="https://picasaweb.google.com/lh/photo/5cgk0XQ82fTJqK8HaioC59MTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img src="https://lh5.googleusercontent.com/-9Er30Zoj32w/T15VYhiopAI/AAAAAAAAA28/RF_jmKzqlvM/s640/DSC_0068.JPG" height="426" width="640" /></a></td></tr><tr><td style="font-family:arial,sans-serif; font-size:11px; text-align:right">From <a href="https://picasaweb.google.com/102609311033098924606/OpenEnergyMonitorEmonTxBuild?authuser=0&feat=embedwebsite">OpenEnergyMonitor - emonTx Build</a></td></tr></table>
+      </p>
 
+      <p>&nbsp;</p>
+
+      <h2>Step 9 - 100nF Ceramic Capacitors</h2>
+
+      <p>
+        First we add the xx resistors - their colour code is Brown, Black, Black, Red.<br />
+        <br />
+        <table style="width:auto;"><tr><td><a href="https://picasaweb.google.com/lh/photo/rl5BlVQJKmuQp8G-VuVGeNMTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img src="https://lh4.googleusercontent.com/-MsQj1lyBUP8/T15Vao3nHPI/AAAAAAAAA3U/Vkrzxi2UPfI/s640/DSC_0071.JPG" height="426" width="640" /></a></td></tr><tr><td style="font-family:arial,sans-serif; font-size:11px; text-align:right">From <a href="https://picasaweb.google.com/102609311033098924606/OpenEnergyMonitorEmonTxBuild?authuser=0&feat=embedwebsite">OpenEnergyMonitor - emonTx Build</a></td></tr></table>
+      </p>
+
+      <p>&nbsp;</p>
+
+      <h2>Step 10 - 10uF Electrolytic Capacitors</h2>
+
+      <p>
+        First we add the xx resistors - their colour code is Brown, Black, Black, Red.<br />
+        <br />
+        <table style="width:auto;"><tr><td><a href="https://picasaweb.google.com/lh/photo/qotQ12ocHwh5O62ilwVyxtMTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img src="https://lh6.googleusercontent.com/-A6jdz_PDjeY/T15VcueZr1I/AAAAAAAAA3w/7SyeFfH2Oao/s640/DSC_0075.JPG" height="426" width="640" /></a></td></tr><tr><td style="font-family:arial,sans-serif; font-size:11px; text-align:right">From <a href="https://picasaweb.google.com/102609311033098924606/OpenEnergyMonitorEmonTxBuild?authuser=0&feat=embedwebsite">OpenEnergyMonitor - emonTx Build</a></td></tr></table>
+      </p>
+
+      <p>&nbsp;</p>
+
+      <h2>Step 11 - 16Mhz Crystal</h2>
+
+      <p>
+        First we add the xx resistors - their colour code is Brown, Black, Black, Red.<br />
+        <br />
+        <table style="width:auto;"><tr><td><a href="https://picasaweb.google.com/lh/photo/gRCAyT4F86V0GsfuGWlL6tMTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img src="https://lh3.googleusercontent.com/-JRHDBTGz2vQ/T15VhMn4oyI/AAAAAAAAA4c/28m-SB39ah0/s640/DSC_0080.JPG" height="426" width="640" /></a></td></tr><tr><td style="font-family:arial,sans-serif; font-size:11px; text-align:right">From <a href="https://picasaweb.google.com/102609311033098924606/OpenEnergyMonitorEmonTxBuild?authuser=0&feat=embedwebsite">OpenEnergyMonitor - emonTx Build</a></td></tr></table>
+      </p>
+
+      <p>&nbsp;</p>
+
+      <h2>Step 12 - Green LED</h2>
+
+      <p>
+        First we add the xx resistors - their colour code is Brown, Black, Black, Red.<br />
+        <br />
+        <table style="width:auto;"><tr><td><a href="https://picasaweb.google.com/lh/photo/bZKvrPSBpFwTDZ3pipEVEtMTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img src="https://lh6.googleusercontent.com/-tWbCNrN9LyU/T15VizG4OPI/AAAAAAAAA8M/616s8CFvRFQ/s640/DSC_0082.JPG" height="426" width="640" /></a></td></tr><tr><td style="font-family:arial,sans-serif; font-size:11px; text-align:right">From <a href="https://picasaweb.google.com/102609311033098924606/OpenEnergyMonitorEmonTxBuild?authuser=0&feat=embedwebsite">OpenEnergyMonitor - emonTx Build</a></td></tr></table>
+      </p>
+
+      <p>&nbsp;</p>
+
+      <h2>Step 13 - MCP1702 3.3v Voltage Regulator</h2>
+
+      <p>
+        First we add the xx resistors - their colour code is Brown, Black, Black, Red.<br />
+        <br />
+        <table style="width:auto;"><tr><td><a href="https://picasaweb.google.com/lh/photo/qyOoDzaYJ__Ttk3eEkoR_9MTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img src="https://lh4.googleusercontent.com/-mHbxkBLkjRo/T15VkquHVjI/AAAAAAAAA5I/V6nBB7tf6Lw/s640/DSC_0085.JPG" height="426" width="640" /></a></td></tr><tr><td style="font-family:arial,sans-serif; font-size:11px; text-align:right">From <a href="https://picasaweb.google.com/102609311033098924606/OpenEnergyMonitorEmonTxBuild?authuser=0&feat=embedwebsite">OpenEnergyMonitor - emonTx Build</a></td></tr></table>
+      </p>
+
+      <p>&nbsp;</p>
+
+      <h2>Step 14 - Mini USB Socket</h2>
+
+      <p>
+        First we add the xx resistors - their colour code is Brown, Black, Black, Red.<br />
+        <br />
+        <table style="width:auto;"><tr><td><a href="https://picasaweb.google.com/lh/photo/_oy7QFfXJpCoMCSzArrdLtMTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img src="https://lh3.googleusercontent.com/-p7OTog1g8Xw/T15Vl25BKKI/AAAAAAAAA5M/m36g_MtAnIc/s640/DSC_0087.JPG" height="426" width="640" /></a></td></tr><tr><td style="font-family:arial,sans-serif; font-size:11px; text-align:right">From <a href="https://picasaweb.google.com/102609311033098924606/OpenEnergyMonitorEmonTxBuild?authuser=0&feat=embedwebsite">OpenEnergyMonitor - emonTx Build</a></td></tr></table>
+      </p>
+
+      <p>&nbsp;</p>
+
+      <h2>Step 15 - 3.5mm Sockets</h2>
+
+      <p>
+        First we add the xx resistors - their colour code is Brown, Black, Black, Red.<br />
+        <br />
+        <table style="width:auto;"><tr><td><a href="https://picasaweb.google.com/lh/photo/6YV-zkOxVOd11PE2Lqwv6dMTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img src="https://lh6.googleusercontent.com/-mwwH578Qd8g/T15VnfsSuxI/AAAAAAAAA5g/oHkvI-ZNGaM/s640/DSC_0089.JPG" height="426" width="640" /></a></td></tr><tr><td style="font-family:arial,sans-serif; font-size:11px; text-align:right">From <a href="https://picasaweb.google.com/102609311033098924606/OpenEnergyMonitorEmonTxBuild?authuser=0&feat=embedwebsite">OpenEnergyMonitor - emonTx Build</a></td></tr></table>
+      </p>
+
+      <p>&nbsp;</p>
+
+      <h2>Step 16 - 2.1mm Power Socket</h2>
+
+      <p>
+        First we add the xx resistors - their colour code is Brown, Black, Black, Red.<br />
+        <br />
+        <table style="width:auto;"><tr><td><a href="https://picasaweb.google.com/lh/photo/cOeZrYCa162-wnSgljYwYdMTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img src="https://lh5.googleusercontent.com/-Be4Uvy5EOHw/T15VpuicpSI/AAAAAAAAA58/wihyKUWryRA/s640/DSC_0092.JPG" height="426" width="640" /></a></td></tr><tr><td style="font-family:arial,sans-serif; font-size:11px; text-align:right">From <a href="https://picasaweb.google.com/102609311033098924606/OpenEnergyMonitorEmonTxBuild?authuser=0&feat=embedwebsite">OpenEnergyMonitor - emonTx Build</a></td></tr></table>
+      </p>
+
+      <p>&nbsp;</p>
+
+      <h2>Step 17 - DIL Socket</h2>
+
+      <p>
+        First we add the xx resistors - their colour code is Brown, Black, Black, Red.<br />
+        <br />
+        <table style="width:auto;"><tr><td><a href="https://picasaweb.google.com/lh/photo/oPlf3XYcHsZh-cWNoqKuQ9MTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img src="https://lh6.googleusercontent.com/-XdFLRDO8aMw/T15Vquyh5KI/AAAAAAAAA6I/IflMAMPyJlY/s640/DSC_0094.JPG" height="426" width="640" /></a></td></tr><tr><td style="font-family:arial,sans-serif; font-size:11px; text-align:right">From <a href="https://picasaweb.google.com/102609311033098924606/OpenEnergyMonitorEmonTxBuild?authuser=0&feat=embedwebsite">OpenEnergyMonitor - emonTx Build</a></td></tr></table>
+      </p>
+
+      <p>&nbsp;</p>
+
+      <h2>Step 18 - Programming Header</h2>
+
+      <p>
+        First we add the xx resistors - their colour code is Brown, Black, Black, Red.<br />
+        <br />
+        <table style="width:auto;"><tr><td><a href="https://picasaweb.google.com/lh/photo/G6xf7RPXz1R_8vMLyo99OdMTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img src="https://lh6.googleusercontent.com/-h296kTDcPl4/T15VxMwPnwI/AAAAAAAAA64/FYSNoQ0nkmY/s640/DSC_0100.JPG" height="426" width="640" /></a></td></tr><tr><td style="font-family:arial,sans-serif; font-size:11px; text-align:right">From <a href="https://picasaweb.google.com/102609311033098924606/OpenEnergyMonitorEmonTxBuild?authuser=0&feat=embedwebsite">OpenEnergyMonitor - emonTx Build</a></td></tr></table>
+      </p>
+
+      <p>&nbsp;</p>
+
+      <h2>Step 19 - Voltage Check</h2>
+
+      <p>
+        First we add the xx resistors - their colour code is Brown, Black, Black, Red.<br />
+        <br />
+        <table style="width:auto;"><tr><td><a href="https://picasaweb.google.com/lh/photo/BhOzTM0Jaxp2bzzMRbI2DdMTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img src="https://lh3.googleusercontent.com/-EdUjbIdRh6g/T15VyX7XAfI/AAAAAAAAA68/K2LKu6QYOh8/s640/DSC_0101.JPG" height="426" width="640" /></a></td></tr><tr><td style="font-family:arial,sans-serif; font-size:11px; text-align:right">From <a href="https://picasaweb.google.com/102609311033098924606/OpenEnergyMonitorEmonTxBuild?authuser=0&feat=embedwebsite">OpenEnergyMonitor - emonTx Build</a></td></tr></table>
+      </p>
+
+      <p>&nbsp;</p>
+
+      <h2>Step 20 - RFM12B</h2>
+
+      <p>
+        First we add the xx resistors - their colour code is Brown, Black, Black, Red.<br />
+        <br />
+        <table style="width:auto;"><tr><td><a href="https://picasaweb.google.com/lh/photo/URuHzzLHsIUVVMGImx9MmNMTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img src="https://lh6.googleusercontent.com/-p9d8dQe0BsY/T15V0JTD_2I/AAAAAAAAA7Q/1P4YifflXrs/s640/DSC_0103.JPG" height="426" width="640" /></a></td></tr><tr><td style="font-family:arial,sans-serif; font-size:11px; text-align:right">From <a href="https://picasaweb.google.com/102609311033098924606/OpenEnergyMonitorEmonTxBuild?authuser=0&feat=embedwebsite">OpenEnergyMonitor - emonTx Build</a></td></tr></table>
+      </p>
+
+      <p>&nbsp;</p>
+
+      <h2>Step 21 - Antenna</h2>
+
+      <p>
+        First we add the xx resistors - their colour code is Brown, Black, Black, Red.<br />
+        <br />
+        <table style="width:auto;"><tr><td><a href="https://picasaweb.google.com/lh/photo/P7gqertbTmUu6oKeYJv8ItMTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img src="https://lh5.googleusercontent.com/-oMoijk7lrfQ/T15V2kHkJ9I/AAAAAAAAA7s/fxTqxS7hcEI/s640/DSC_0107.JPG" height="426" width="640" /></a></td></tr><tr><td style="font-family:arial,sans-serif; font-size:11px; text-align:right">From <a href="https://picasaweb.google.com/102609311033098924606/OpenEnergyMonitorEmonTxBuild?authuser=0&feat=embedwebsite">OpenEnergyMonitor - emonTx Build</a></td></tr></table>
+      </p>
+
+      <p>&nbsp;</p>
+
+      <h2>Completed Board</h2>
+
+      <p>
+        First we add the xx resistors - their colour code is Brown, Black, Black, Red.<br />
+        <br />
+<table style="width:auto;"><tr><td><a href="https://picasaweb.google.com/lh/photo/WudaECAU6uMnPMp2XoFtB9MTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img src="https://lh4.googleusercontent.com/-xxlcQzlJRXg/T15WFTHA6BI/AAAAAAAAA-8/s4LLu955HaY/s640/DSC_0130.JPG" height="426" width="640" /></a></td></tr><tr><td style="font-family:arial,sans-serif; font-size:11px; text-align:right">From <a href="https://picasaweb.google.com/102609311033098924606/OpenEnergyMonitorEmonTxBuild?authuser=0&feat=embedwebsite">OpenEnergyMonitor - emonTx Build</a></td></tr></table>
+
+<table style="width:auto;"><tr><td><a href="https://picasaweb.google.com/lh/photo/9AVfpySKDe2g8Nfyoka--9MTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img src="https://lh4.googleusercontent.com/-K_LHzGwMAgI/T15V5s8vSqI/AAAAAAAAA8Y/zuv8XjhLm5M/s640/DSC_0111.JPG" height="426" width="640" /></a></td></tr><tr><td style="font-family:arial,sans-serif; font-size:11px; text-align:right">From <a href="https://picasaweb.google.com/102609311033098924606/OpenEnergyMonitorEmonTxBuild?authuser=0&feat=embedwebsite">OpenEnergyMonitor - emonTx Build</a></td></tr></table>
+
+<table style="width:auto;"><tr><td><a href="https://picasaweb.google.com/lh/photo/AMrHIrVYGjPO1SCOptWQH9MTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img src="https://lh6.googleusercontent.com/-RlacQkkC6x8/T15WGcUaXoI/AAAAAAAAA-4/yR2pLwZloYY/s640/DSC_0132.JPG" height="426" width="640" /></a></td></tr><tr><td style="font-family:arial,sans-serif; font-size:11px; text-align:right">From <a href="https://picasaweb.google.com/102609311033098924606/OpenEnergyMonitorEmonTxBuild?authuser=0&feat=embedwebsite">OpenEnergyMonitor - emonTx Build</a></td></tr></table>
+
+      </p>
+
+
+      <h2>Firmware Upload</h2>
+
+      <p>
+        Text Here
+      </p>
+
+
+      <h2>Testing</h2>
+
+      <p>
+        Text Here
       </p>
 
       <p>&nbsp;</p>
