@@ -97,7 +97,7 @@
 
         <table style="width:auto;"><tr><td><a href="https://picasaweb.google.com/lh/photo/wO8grz9JCukR1710w9rxgtMTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img src="https://lh6.googleusercontent.com/-GumIcdcX-XU/T15VIxJAWCI/AAAAAAAAA0M/fELblarGrTs/s640/DSC_0042.JPG" height="426" width="640" /></a></td></tr><tr><td style="font-family:arial,sans-serif; font-size:11px; text-align:right">From <a href="https://picasaweb.google.com/102609311033098924606/OpenEnergyMonitorEmonTxBuild?authuser=0&feat=embedwebsite">OpenEnergyMonitor - emonTx Build</a></td></tr></table>
 
-        <p><i>Note that the photo shows two different types of the 22pF capacitors - brown ceramic disc and small blue ones - only one of these pairs are required/included and are equivelent.</i></p>
+        <p><i>Note that the photo shows two different types of the 22pF capacitors - brown ceramic disc (labelled 22 and with black tops) and small blue ones - only one of these pairs are required/included and they are equivelent.</i></p>
       </p>
 
       <p style="margin-top: 30px;">
@@ -114,8 +114,11 @@
 	This is where everything should go:
 	<br />
         <table style="width:auto;"><tr><td><a href="https://picasaweb.google.com/lh/photo/u3spncXhKOTI9vZVbayhuNMTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img src="https://lh6.googleusercontent.com/-9DmuVRodcG8/T15el6ngApI/AAAAAAAAA_g/6BOnT9eEH_M/s640/emonTxV2.2_PCBvalues.png" height="576" width="640" /></a></td></tr><tr><td style="font-family:arial,sans-serif; font-size:11px; text-align:right">From <a href="https://picasaweb.google.com/102609311033098924606/OpenEnergyMonitorEmonTxBuild?authuser=0&feat=embedwebsite">OpenEnergyMonitor - emonTx Build</a></td></tr></table><br />
+        <i>Please note that despite the diagram above and the photo below, we do not fit the 10k resistor under the pulse counting socket at the top of the board as this can cause problems.</i><br />
         <br />
-        <img src="http://openenergymonitor.org/emon/sites/default/files/emonTx_V2.0%20overview.png" width="640" height="426" />
+        <img src="http://openenergymonitor.org/emon/sites/default/files/emonTx_V2.0%20overview.png" width="640" height="426" /><br />
+        <br />
+        <i>Please note the above photo is from an older version of the board and therefore is slightly different (eg: some of the resistor values have changed) - it's just here to show the various parts of the board.</i><br />
       </p>
 
       <h2>Step 2 - 18 ohm Resistors</h2>
@@ -136,7 +139,11 @@
       <p>
         Add the 2x 10k resistors - they are blue and their colour code is: Brown, Black, Black, Red, Brown.<br />
         <br />
-        <table style="width:auto;"><tr><td><a href="https://picasaweb.google.com/lh/photo/jqxzBaiyFgGJQICmnMpz5dMTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img src="https://lh3.googleusercontent.com/-kkkJdBxpf2M/T15VM-zJnwI/AAAAAAAAA00/RhQi8n1HHWY/s640/DSC_0051.JPG" height="426" width="640" /></a></td></tr><tr><td style="font-family:arial,sans-serif; font-size:11px; text-align:right">From <a href="https://picasaweb.google.com/102609311033098924606/OpenEnergyMonitorEmonTxBuild?authuser=0&feat=embedwebsite">OpenEnergyMonitor - emonTx Build</a></td></tr></table>
+        <table style="width:auto;"><tr><td><a href="https://picasaweb.google.com/lh/photo/jqxzBaiyFgGJQICmnMpz5dMTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img src="https://lh3.googleusercontent.com/-kkkJdBxpf2M/T15VM-zJnwI/AAAAAAAAA00/RhQi8n1HHWY/s640/DSC_0051.JPG" height="426" width="640" /></a></td></tr><tr><td style="font-family:arial,sans-serif; font-size:11px; text-align:right">From <a href="https://picasaweb.google.com/102609311033098924606/OpenEnergyMonitorEmonTxBuild?authuser=0&feat=embedwebsite">OpenEnergyMonitor - emonTx Build</a></td></tr></table><br />
+        <br />
+        <i>Note that the diagram above shows a 3rd 10k resistor - under the pulse counting input (R8). This is an optional pull down resistor for the pulse counting interrupt input / general digital I/O. More often than not it's not needed so is not included in the kit as if fitted, it will do more harm than good e.g if 10K resistor is soldered into R8 an optical sensor plugged into this port to detect the LED pulses from pulse output meters won't work.<br />
+<br />
+R8 is only actually useful when connecting directly (via wire) to the pulse output from a utility meter, we're not recommending this method since it's not galvanically isolated and to connect the wires you have to work very close to high voltage, not ideal. Optical pulse detection is much safer.</i>
       </p>
 
       <p>&nbsp;</p>
@@ -212,7 +219,7 @@
       <h2>Step 11 - 16Mhz Crystal</h2>
 
       <p>
-        Add the 16Mhz crystal. You should leave a small gap between the bottom of the crystal and the PCB to avoid any shorts with the metal case.<br />
+        Add the 16Mhz crystal - it can go either way round.<br />
         <br />
         <table style="width:auto;"><tr><td><a href="https://picasaweb.google.com/lh/photo/gRCAyT4F86V0GsfuGWlL6tMTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img src="https://lh3.googleusercontent.com/-JRHDBTGz2vQ/T15VhMn4oyI/AAAAAAAAA4c/28m-SB39ah0/s640/DSC_0080.JPG" height="426" width="640" /></a></td></tr><tr><td style="font-family:arial,sans-serif; font-size:11px; text-align:right">From <a href="https://picasaweb.google.com/102609311033098924606/OpenEnergyMonitorEmonTxBuild?authuser=0&feat=embedwebsite">OpenEnergyMonitor - emonTx Build</a></td></tr></table>
       </p>
@@ -332,12 +339,35 @@
 
       </p>
 
+      <p>&nbsp;</p>
+
+      <h2>Voltage Selection Notes</h2>
+
+      <p>
+On this latest version of the emonTx PCB, two solder jumpers have been added by the IRQ I/O and temperature (DS18B20) ports. They allow the user to decide what voltage to use on these ports. The emonTx runs at 3.3V. More explanation can be found in <a href="http://openenergymonitor.blogspot.com/2011/12/new-emontx-pcb.html" target="_blank">this blog post</a>. Connection is made by joining the middle pad the either of the outer pads with solder.<br />
+<br />
+If you look careful the solder jumper above the temperature port is connected to 5V (small PCB trace). This was an error, but actually work out well. The temperature sensors always use 5v (which is good) and when the emonTx is powered by 2 x AA's the the 5V rail becomes 3.3V anyway. Therefore, you can  ignore this solder jumper, it will disappear in the next generation of emonTx PCB's. 
+      </p>
+
+      <p>&nbsp;</p>
 
       <h2>Firmware Upload</h2>
 
       <p>
+        ATmega will come with Arduino Optiboot 4.4 bootloader (select Uno in IDE) but with no sketch uploaded. The correct sketch must be uploaded using Arduno IDE.<br />
+        <br />
+        Coming Soon - detail of sketch and how to upload.<br />
+      </p>
+
+      <p>&nbsp;</p>
+
+      <h2>Connections</h2>
+
+      <p>
         Coming Soon
       </p>
+
+      <p>&nbsp;</p>
 
 
       <h2>Testing</h2>
